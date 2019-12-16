@@ -10,8 +10,9 @@ if($fh = fopen('DBport.txt', 'r')) {
     fclose($fh);
 }
 
+$hostID = $port+$line;
 
-$con = mysqli_connect($port+$line,"root","","ligonine");
+$con = mysqli_connect($hostID,"root","","ligonine");
 if (mysqli_connect_error())
 {
     echo "Failed to connect to MySQL: " . mysqli_connect_error();
